@@ -11,8 +11,8 @@ class TestGUI(tk.Frame):
         super().__init__(master)
         self.Title = tk.Label(self, text='WORLD CUP PREDICTOR', font='Ariel 30 underline')
         self.Description = tk.Label(self, text='Please click on the flag that you would like to see the statistics of:', font = 'Helvetica 15')
-
-        self.England_Button = tk.Button(self, tk.PhotoImage(file='England_Flag.png'))
+        self.England_Flag = tk.PhotoImage(file='England_Flag.png')
+        self.England_Button = tk.Button(self, image = self.England_Flag, width=100, height=65)
 
         self.place_widgets()
 
