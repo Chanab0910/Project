@@ -8,20 +8,21 @@ class TestGUI(tk.Frame):
 
     def __init__(self, master):
         super().__init__(master)
+
         self.Space = tk.Label(self, text=' ',bg='white')
-        self.Title = tk.Label(self, text='WORLD CUP PREDICTOR', font='Ariel 30 underline', bg='white')
+        self.Title = tk.Label(self, text='WORLD CUP PREDICTOR', font=('FuturaStd-Heavy',45), bg='white', pady=30)
 
         self.Description1 = tk.Label(self, text='Welcome to the World cup predictor. In this predictor, the World '
-                                                'Cup has been simulated 1000 times, and you ', font = 'Helvetica 15',bg='white' )
+                                                'Cup has been simulated 1000 times, and you ', font = 'FuturaStd-Medium',bg='white', padx=50, pady=4, )
 
         self.Description2 = tk.Label(self, text='are able to see accurate chances of a range of possibilities '
-                                                'happening. This can range from how many times', font = 'Helvetica 15',bg='white')
+                                                'happening. This can range from how many times', font = 'FuturaStd-Medium',bg='white', padx=50, pady=4)
 
         self.Description3 = tk.Label(self, text='they won the World Cup to the average amount of '
-                                                'yellow cards per game.', font = 'Helvetica 15',bg='white')
+                                                'yellow cards per game.', font = 'FuturaStd-Medium',bg='white',padx=50, pady=4)
 
-        self.Next_Page_Button = tk.Button(self, text='See Results')
-        self.quit = tk.Button(self, text='Quit', command=quit)
+        self.Next_Page_Button = tk.Button(self, text='See Results',font = 'FuturaStd-Medium')
+        self.quit = tk.Button(self, text='Quit',font = 'FuturaStd-Medium', command=quit)
 
         self.place_widgets()
 
