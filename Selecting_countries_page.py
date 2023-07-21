@@ -7,8 +7,8 @@ class TestGUI(tk.Frame):
     """ Test GUI subclasses the tk.Frame, so that we can use all the attributes of the tk.Frame and add our own widgets to
     the Frame"""
 
-    def __init__(self, master):
-        super().__init__(master)
+    def __init__(self):
+        super().__init__()
         self.Title = tk.Label(self, text='WORLD CUP PREDICTOR', font='Ariel 30 underline')
         self.Description = tk.Label(self, text='Please click on the flag that you would like to see the statistics of:', font = 'Helvetica 15')
         self.England_Flag = tk.PhotoImage(file='England_Flag.png')
@@ -28,6 +28,6 @@ class TestGUI(tk.Frame):
 
 if __name__ == '__main__':
     root = tk.Tk()
-    main_frame = TestGUI(root)
+    main_frame = TestGUI()
     main_frame.pack()
     root.mainloop()
